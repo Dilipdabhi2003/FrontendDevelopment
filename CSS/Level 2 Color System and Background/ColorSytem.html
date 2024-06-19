@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color System</title>
+    <style>
+        .back_learn{
+            color: rgba(208, 63, 63, 1);
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            text-align: center;
+        }
+        #box1{
+            background-color:  #ff0000;
+        }
+        #box2{
+            background-color: #00ff00;
+        }
+        #box3{
+            background-color: #0000ff;
+        }
+        #icon{
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: rgb(255, 0, 0) ;">Fisrt Div</div>
+    <div style="background-color: rgb(0,255,  0) ;">Second Div</div>
+    <div style="background-color: rgb(0,0,255) ;">Third Div</div>
+    <div style="background-color: rgb(0, 0, 0) ; color: rgb(255, 255, 255);">Fourth Div</div>
+<hr>
+    <h1> HEX COLOR MODE </h1>
+    <div style="background-color: #ff0000 ;">Fisrt Div</div>
+    <div style="background-color: #00ff00 ;">Second Div</div>
+    <div style="background-color: #0000ff ;">Third Div</div>
+    <div style="background-color: #000000 ; color: #ffffff;">Fourth Div</div><hr>
+
+    <h1>Alpha Channel</h1>
+    <div class="back_learn">BackGroud Color</div>
+    <hr>
+
+    <h1>Height And Width</h1>
+
+    <div class="box" id="box1">Box 1</div>
+    <div class="box" id="box2">Box 2</div>
+    <div id="box3" class="box">Box 3</div><hr>
+
+<b1>Backgroud Image</b1>
+<div id="icon">
+    <img src="data:image/png;base64,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" alt="">
+    <h1>Visibility</h1>
+    <div class="box" id="box1" style="visibility: hidden;">Box 1</div>
+    <div class="box" id="box2">Box 2</div><hr>
+
+</div>
+</body>
+</html>
