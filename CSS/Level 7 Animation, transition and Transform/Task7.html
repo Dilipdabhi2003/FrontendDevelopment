@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .progress-container{
+            width: 90%;
+            height: 25px;
+            background-color: aquamarine;
+
+            border: 3px solid black;
+            border-radius: 20px;
+            position: relative;
+            left: 5%;
+
+
+
+        }
+        .progress-bar{
+            background-color: violet;
+            height: 100%;
+           
+            border-radius: 20px;
+
+            animation: animate_progress 3s;
+           
+        }
+        @keyframes animate_progress {
+            0%{
+                width: 0%;
+            }
+            90%{
+                width: 95%;
+            }
+            95%{
+                width: 70%;
+            }
+            100%{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 7</h1>
+
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+</body>
+</html>

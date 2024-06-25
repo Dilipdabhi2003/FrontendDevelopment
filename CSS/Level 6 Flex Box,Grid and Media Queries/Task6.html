@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        header{
+            
+            background-color: aqua;
+            }
+        a{
+            margin: 20px;
+            text-decoration: none;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+        }
+        #image_container{
+            border: 4px solid black;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            height: 900px;
+
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 3px solid red;
+        }
+        #box_container{
+            border: 5px solid black;
+            display: flex;
+            justify-content: space-around;
+        }
+        #box2{
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        #midea_box{
+            height: 150px;
+            width: 150px;
+            background-color: violet;
+            border: 3px solid black;
+        }
+        @media screen and (min-width : 400px) {
+            #midea_box{
+                background-color: blue;
+            }  
+        }
+        @media screen and (min-width : 300px) and (max-width:400px) {
+            #midea_box{
+                background-color: red;
+            }  
+        }
+
+</style>
+</head>
+<body>
+    <h1>Task 6 (Flex Box, Grid,Media Queries)</h1>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Product</a>
+            <a href="#">Contact</a>
+            <a href="#">Support</a>
+        </nav>
+    </header>
+    <main>
+        <div id="image_container">
+            <img src="https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40087/thar-exterior-front-view.jpeg?q=80" alt="">
+        </div>
+        <div id="box_container">
+            <div id="box1" class="box">Box 1</div>
+            <div id="box2" class="box">Box 2</div>
+            <div id="box3" class="box">Box 3</div>
+        </div>
+    </main>
+    <div id="midea_box">Media Box</div>
+
+</body>
+</html>

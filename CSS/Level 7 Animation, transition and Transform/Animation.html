@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .box{
+            height: 75px;
+            width: 75px;
+            border: 3px solid black;
+            border-radius: 5px;
+            position: absolute;
+            left: 10;
+            background-color: lime;
+
+            animation-name: side;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+
+            animation-direction: alternate-reverse;
+            
+            /* animation: side 2s ease-in-out 1s infinite alternate; */
+
+
+        }   
+
+        @keyframes side {
+            0%{
+                left:10px;
+            }
+            50%{
+                left: 50px;
+            }
+            100%{
+                left: 200px;
+            }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <H1>Animation</H1>
+    <div class="box">Animation</div>
+</body>
+</html>
