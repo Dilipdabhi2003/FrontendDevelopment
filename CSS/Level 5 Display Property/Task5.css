@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    padding: 5px;
+}
+nav a{
+    text-decoration: none;
+    margin-left: 55px;
+    padding: 20px;
+}
+header{
+    height: 30px;
+    background-color: aqua;
+}
+#second{
+    height: 50px;
+    width: 50px;
+    background-color: green;
+    border-radius: 30px;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: blueviolet;
+    margin: 5px;
+    display: inline-block;
+}
+#container{
+   border: 3px solid;
+   margin: 5px;
+}
+#box4{
+    position: fixed;
+    right: 10px;
+}
+#box2{
+    z-index: 2;
+    position: absolute;
+    left: 20px;
+    top: 200px;
+}
+footer{
+    position: fixed;
+    bottom: 0px;
+    background-color: cornflowerblue;
+}
