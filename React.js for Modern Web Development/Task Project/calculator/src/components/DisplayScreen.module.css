@@ -1,0 +1,9 @@
+.display {
+  margin: 5px;
+  width:320px;
+  font-size: 25px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: right;
+}
