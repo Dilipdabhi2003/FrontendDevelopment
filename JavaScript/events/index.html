@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1{
+            margin-bottom: 2.4rem;
+        }
+    </style>
+</head>
+<body>
+    <!--============ Start Inline Enents ================-->
+
+    <h1>Inline Event</h1>
+    <button onclick="alert('Welcome')">Greeting</button>
+    <button ondblclick="alert('Welcome Back')">Greeting again</button>
+    <button onmouseover="alert('Welcome Inline Mouse Event')">Greeting again</button>
+
+    <!--============ End Inline Enents ================-->
+
+
+    <!--============ Start DOM Enents Handler ================-->
+
+    <h1>DOM Event handler</h1>
+    <button id="myBtn">Greeting</button>
+    <button id="myBtn1">Greeting again</button>
+
+    <!--============ End DOM Enents Handler ================-->
+
+    <!--================== Start add Event Listener =====================-->
+    <h1>addEventListener Event handler</h1>
+    <button id="eBtn1">Greeting</button>
+    <button id="eBtn2">Greeting again</button>
+    <!--================== End add Event Listener =====================-->
+
+
+
+    <script>
+        document.getElementById('myBtn').onclick=()=>
+        {
+            alert('Welcome');
+        };
+       document.getElementById('myBtn1').onmouseover = function(){
+            alert("Using DOM Mouser Over Event");
+        };
+
+        document.getElementById('eBtn1').addEventListener('click', function(){
+            alert('addEventLisrener By click')
+        });
+
+        document.getElementById('eBtn2').addEventListener('mouseover',function (){
+            alert('addEventLisrener By Mouse Over');
+        });
+
+
+    </script>
+
+</body>
+</html>

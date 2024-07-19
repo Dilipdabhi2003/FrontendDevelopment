@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Local Stroage</title>
+</head>
+<body>
+    <div>
+        <button id="addBtn">Add Data to localStorage</button>
+        <button id="getBtn">Get Data from localStorage</button>
+        <button id="removeBtn">Delete Data from localStorage</button>
+    </div>
+    <script>
+        const studentBioData = {
+            firstName : "Dilip",
+            lastName : "Dabhi",
+            age : 20,
+            gender : "Male",
+            grade : "A+",
+            courses : ["Java","Python","JavaScript"],
+            address : {
+                street : "Kailash Dham",
+                city : "Bhavnagar",
+                state : "Gujarat",
+                zipCode : "1234567890"
+            },
+        };
+
+
+        // Add Data to Local Storage:
+        const addTodoList = () => {
+            // localStorage.setItem("objectData",studentBioData);
+            localStorage.setItem("objectData",JSON.stringify(studentBioData));
+
+        };
+        document.getElementById("addBtn").addEventListener("click",() =>{
+            addTodoList();
+        })
+
+        // Get Data to Local Storage:
+        const getTodoList = () => {
+            const retrievedStudentData = JSON.parse(localStorage.getItem("objectData"));
+            console.log("Retrieved from Lacal Storage :",retrievedStudentData);
+        }
+        
+        document.getElementById("getBtn").addEventListener("click",() => {
+            getTodoList();
+        })
+
+
+        // Remove Data to Local Storage:
+        const removeTodoList = () => {
+            const removeStudentData = localStorage.removeItem("objectData");
+            console.log("Data Sussessfully Delete ");
+        }
+
+        document.getElementById("removeBtn").addEventListener("click",() => {
+            removeTodoList();
+        })
+
+
+    </script>
+</body>
+</html>

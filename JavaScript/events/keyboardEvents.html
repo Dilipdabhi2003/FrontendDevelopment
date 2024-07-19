@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyBoard Events</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+                body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 3rem;
+        }
+        
+        .keyPressed, .keyCode, .eventType {
+            color: #f5ee62;
+        }
+        .output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="myInput" placeholder="Type Something...">
+
+        <div class="output">
+            <p class="keyPressed">Key pressed :</p>
+            <p class="keyCode">Key Code :</p>
+            <p class="charCode">Char codeAt :</p>
+            <p class="eventType">Event type :</p>
+        </div>
+
+    </div>
+
+    <script>
+        var myInput = document.getElementById("myInput");
+        
+        const handleKeyPress =(event)=>{
+            console.log(event);
+            console.log("Key pressed :",event.key);
+            console.log("Key code :",event.code);
+            console.log("Event type :",event.type);
+
+            document.querySelector(".keyPressed").textContent = `Key pressed: ${event.key}`;
+
+            document.querySelector(".keyCode").textContent = `Key Code : ${event.code}`;
+
+            document.querySelector(".charCode").textContent = `Character code : ${event.key.charCodeAt(0)}`;
+
+            document.querySelector(".eventType").innerHTML = `Event type : ${event.type}`;
+        }
+
+        myInput.addEventListener('keydown',handleKeyPress);
+        // myInput.addEventListener('keyup',handleKeyPress)
+    </script>
+</body>
+</html>
